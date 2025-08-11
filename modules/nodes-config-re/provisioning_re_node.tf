@@ -1,6 +1,6 @@
-#### Generating Ansible config, inventory, playbook 
+#### Generating Ansible config, inventory, playbook
 #### and configuring RE nodes and installing RE software
-#### (RE nodes need special configuration to work with Ubuntu 18)
+#### (RE nodes need special configuration to work with Ubuntu 20)
 
 #### TESTING
 # Define a null_resource block for the retry logic
@@ -52,7 +52,7 @@ resource "null_resource" "remote-config" {
 #### otherwise it can run to fast, not find the inventory file and fail or hang
 resource "time_sleep" "wait_30_seconds_re" {
   create_duration = "30s"
-  depends_on = [local_file.inventory-setup, 
+  depends_on = [local_file.inventory-setup,
                 local_file.ssh-setup]
 }
 
