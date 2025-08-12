@@ -5,7 +5,7 @@
 # "ubuntu\\/images\\/hvm-ssd\\/ubuntu-focal-20.04-amd64-server-20240321"
 data "aws_ami" "ami" {
   most_recent = true
-  name_regex  = "ubuntu\\/images\\/hvm-ssd\\/ubuntu-focal-20.04-amd64-server-20240321"
+  name_regex  = "ubuntu\\/images\\/hvm-ssd\\/ubuntu-focal-20.04-amd64-server-*"
   # This is Canonical's ID (find here: https://ubuntu.com/server/docs/cloud-images/amazon-ec2)
   owners = ["099720109477"]
 
